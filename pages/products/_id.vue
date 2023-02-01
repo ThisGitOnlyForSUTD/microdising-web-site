@@ -1,7 +1,15 @@
 <template>
 <div class="wrapper">
   <div class="product container">
-    <img class="product-img" :src="product.imgs" alt="grib">
+    <div class="product-img">
+      <VueSlickCarousel class="carusel swiper" :dots="true">
+        <div v-for="slider in product.imgs" :key="slider+1" alt="" :src="slider">
+          <div class="">
+            <img class="product-img" :src="slider" alt="">
+          </div>
+        </div>
+      </VueSlickCarousel>
+    </div>
     <div class="product-card">
       <div class="product-text">
         <h2 class="">{{ product.title }}</h2>
@@ -29,6 +37,9 @@
 </template>
 
 <script>
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 import { mapGetters } from 'vuex'
 export default {
   data () {
@@ -38,6 +49,7 @@ export default {
       selected: 100
     }
   },
+  components: { VueSlickCarousel },
 
   computed: {
     ...mapGetters(['SHOW_PRODUCTS']),

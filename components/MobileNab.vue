@@ -1,72 +1,46 @@
 <template>
-  <div class="mobile-header container">
-    <section class="mobile-header-nav container">
-      <router-link to="/" class="mobile-header__logo">
-      </router-link>
-
-      <router-link tag="a" to="/*" class="mobile-header-nav__link">
-        </router-link>
-
-        <router-link tag="a" to="/*" class="mobile-header-nav__link">
-        </router-link>
-
-        <router-link tag="a" to="/*" class="mobile-header-nav__link">
-        </router-link>
-    </section>
-    <section class="mobile-header__main container">
-      <div class="mobile-header__menu">
+  <nav class="nav">
+    <div class="nav__menu">
+      <button class="nav__btn" v-show="showList == false" @click="showList = !showList">
+        <svg width="45" height="45" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 7H19" stroke="#ff3a46" stroke-width="2" stroke-linecap="round"/>
+          <path d="M1 12H19" stroke="#ff3a46" stroke-width="2" stroke-linecap="round"/>
+          <path d="M5 17H19" stroke="#ff3a46" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
       <transition name="show-list">
-        <div class="mobile-header__wrapper" v-if="showList">
-          <ul class="mobile-header__list">
-              <h3 class="mobile-header__title">Каталог</h3>
-            <router-link
-            v-for="link in links"
-            :key="link.id + 1"
-             class="mobile-header__link"
-             tag="li"
-             active-class="active"
-             :to="link.url"
-             exact
-             >
-              <span>
-                {{ link.text }}
-              </span>
-              <div class="mobile-header__arrow">
-              </div>
-            </router-link>
+        <div class="nav__wrapper" v-if="showList" @click="showList = !showList">
+          <ul class="nav__list">
+            <li class="nav-item"><nuxt-link class="nav__link" to="/">Главная</nuxt-link></li>
+            <li class="nav-item"><a class="nav__link" href="#work">Каталог</a></li>
+            <li class="nav-item"><a class="nav__link" href="#testimonial">Отзывы</a></li>
+            <li class="nav-item"><a class="nav__link" href="#contact">Контакты</a></li>
+            <ul class="social" style='border-color: #26b2f3'>
+              <li><a class="social-item" href="#"><i class="fa fa-telegram" style='color:#26b2f3; font-size: 55px'></i></a></li>
+              <li><a class="social-item" href="#"><i class="fa fa-whatsapp" style='color:#39f362; font-size: 55px;'></i></a></li>
+            </ul>
           </ul>
         </div>
       </transition>
-      </div>
-      <form action="/catalog/" class="mobile-header-search">
-      <button class="mobile-header-search__btn">
-      </button>
-      <input type="text" class="mobile-header-search__input" placeholder="Поиск среди товаров">
-    </form>
-    </section>
-
-    <v-navigation/>
-  </div>
+    </div>
+      <a href="#">
+        <img src="@/static/assets/images/logo.png" class="nav__logo" alt="logo">
+      </a>
+  </nav>
 </template>
 
 <script>
 export default {
+  name: 'AppNav',
+
   data () {
     return {
       showList: false,
+      showSearch: false,
       links: [
-        { id: '1', text: 'Ноутбуки и аксессуары', url: '/*', img: 'item1' },
-        { id: '2', text: 'Смартфоны и аксессуары', url: '/*', img: 'item2' },
-        { id: '3', text: 'Телевизоры и аксессуары', url: '/*', img: 'item3' },
-        { id: '4', text: 'Фото и видеотехника', url: '/*', img: 'item4' },
-        { id: '5', text: 'Планшеты и аксессуары', url: '/*', img: 'item5' },
-        { id: '6', text: 'Наушники и аудиотехника', url: '/*', img: 'item6' },
-        { id: '7', text: 'Гейминг', url: '/*', img: 'item7' },
-        { id: '8', text: 'Умные часы', url: '/*', img: 'item8' },
-        { id: '9', text: 'Портативная акустика', url: '/*', img: 'item9' },
-        { id: '10', text: 'Сетевое оборудование', url: '/*', img: 'item10' },
-        { id: '11', text: 'Офисная техника', url: '/*', img: 'item11' },
-        { id: '12', text: 'Умный дом', url: '/*', img: 'item12' }
+        { id: 'home', text: 'Главная', url: '/' },
+        { id: 'about', text: 'О нас', url: '/about' },
+        { id: 'products', text: 'Каталог', url: '/products' }
       ]
     }
   }
@@ -74,125 +48,122 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.mobile-header {
+
+.social {
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.social-item {
+  margin-right: 30px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 2rem 10px 2rem;
+  position: fixed;
+  z-index: 50;
+  top: 0;
   width: 100%;
-  margin: 0 auto;
+
+  &-item {
+    &:not(:last-child) {
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
 
   &__logo {
-    margin-right: 32px;
-
-    img {
-      width: 159px;
-    }
+    max-width: 70px;
+    // max-height: 30px;
   }
 
-  &__main {
-    display: flex;
-    align-items: center;
-  }
-
-  &-search {
-      display: flex;
-      align-items: center;
-      height: 36px;
-      width: 100%;
-      max-width: 261px;
-      border: 2px solid #DDDDDD;
-      border-radius: 100px;
-      padding: 18px 10px;
-
-      &__btn {
-        margin-right: 6px;
-      }
-
-      &__input {
-        border: none;
-        width: 100%;
-        font-size: 14px;
-      }
-    }
-
-  &__arrow {
-    position: absolute;
-    right: 0.5rem;
-    top: 0.5rem;
-  }
-
-  &__title {
-    margin: 48px 0 18px 10px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 28px;
-  }
-
-  &__img {
-    width: 35px;
-    height: 35px;
-    margin-right: 8px;
-  }
-
-  &__close {
-    position: absolute;
-    top: 18px;
-    right: 15px;
-    z-index: 3000;
-    cursor: pointer;
-  }
   &__wrapper {
     width: 100%;
     height: 100vh;
-    background: rgb(255, 255, 255);
     position: absolute;
-    top: 0;
+    top: -2rem;
     left: 0;
     z-index: 2;
-    overflow: hidden;
   }
 
   &__menu {
-    margin-right: 15px;
+    width: 100%;
   }
 
   &__list {
     position: absolute;
     z-index: 70;
-    top: 0;
+    top: 2rem;
     left: 0;
-    height: 100%;
+    height: 100vh;
     background: rgb(255, 255, 255);
-    width: 100%;
-    overflow: hidden;
-  }
+    width: 60%;
+    padding-top: 150px;
+    -webkit-box-shadow: 12px -2px 5px -5px rgba(34, 60, 80, 0.6);
+    -moz-box-shadow: 12px -2px 5px -5px rgba(34, 60, 80, 0.6);
+    box-shadow: 12px -2px 5px -5px rgba(34, 60, 80, 0.6);
 
-  &-nav {
-    margin: 20px 0 23px 0;
-    display: flex;
-    align-items: center;
-
-    &__link {
-    &:not(:last-child) {
-      margin-right: 15px;
-    }
-  }
   }
 
   &__link {
-    padding: 8px 0 8px 10px;
-    display: flex;
-    align-items: center;
+    margin: 0 0 25px 40px;
     cursor: pointer;
-    font-size: 16px;
-    line-height: 19px;
-    position: relative;
+    text-transform: uppercase;
+    font-size: 25px;
+    color: #ff3a46;
+  }
 
-    span {
-      width: 240px;
+  &-search {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+
+    &__input {
+    border: none;
+    padding: 0 2px 0 20px;
+    color: #fff;
+    font-size: 20px;
+    background: rgba(27, 27, 27, 0.573);
+    border-radius: 3rem;
     }
 
-    &:not(:last-child) {
-    border-bottom: 2px solid #E8E8E8;
+    &__ico {
+      margin: 6px 4px 1px 4px;
     }
   }
+
+  @media (max-width: 620px) {
+    background: rgb(255, 255, 255);
+   -webkit-box-shadow: 5px 5px 10px 6px rgba(34, 60, 80, 0.6);
+    -moz-box-shadow: 5px 5px 10px 6px rgba(34, 60, 80, 0.6);
+    box-shadow: 5px 5px 10px 6px rgba(34, 60, 80, 0.6);
+  }
+}
+
+.show-list-enter-active {
+     transition: all .3s ease;
+}
+.show-list-leave-active {
+  transition: all .8s;
+}
+.show-list-enter, .show-list-leave-to {
+  transform: translateX(-150px);
+  opacity: 0;
+}
+
+.show-search-enter-active {
+  transition: all .3s ease;
+}
+
+.show-search-leave-active {
+  transition: all .8s;
+}
+
+.show-search-enter, .show-search-leave-to {
+  transform: translateY(-150px);
+  opacity: 0;
 }
 </style>

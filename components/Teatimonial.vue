@@ -36,6 +36,13 @@ export default {
 .swiper {
   margin-top: 50px;
   max-width: 800px;
+
+  @media (max-width: 765px) {
+    max-width: 500px;
+  }
+  @media (max-width: 457px) {
+    max-width: 350px;
+  }
 }
 
 .title {

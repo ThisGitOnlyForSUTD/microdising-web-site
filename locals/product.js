@@ -2,7 +2,11 @@ const productList = [
   {
     id: 1,
     title: 'ПАНТЕРНЫЙ МУХОМОР 1 СОРТ',
-    imgs: 'https://ae04.alicdn.com/kf/A0b764f9e13224c94911de8e01c396140P/-.jpg',
+    imgs: [
+      'https://ae04.alicdn.com/kf/A0b764f9e13224c94911de8e01c396140P/-.jpg',
+      'https://ae04.alicdn.com/kf/A0b764f9e13224c94911de8e01c396140P/-.jpg',
+      'https://ae04.alicdn.com/kf/A0b764f9e13224c94911de8e01c396140P/-.jpg'
+    ],
     price: [
       { oldPrice: 7498, count: 100, price: 2474 },
       { oldPrice: 14996, count: 200, price: 4949 },
@@ -21,7 +25,11 @@ const productList = [
   {
     id: 2,
     title: 'ПАНТЕРНЫЙ ЧИСТЫЙ ПОРОШОК',
-    imgs: 'https://ae04.alicdn.com/kf/A0d90da81aa584d619e8d46c6fc1d68e2R/-.jpg',
+    imgs: [
+      'https://ae04.alicdn.com/kf/A0d90da81aa584d619e8d46c6fc1d68e2R/-.jpg',
+      'https://ae04.alicdn.com/kf/A0d90da81aa584d619e8d46c6fc1d68e2R/-.jpg',
+      'https://ae04.alicdn.com/kf/A0d90da81aa584d619e8d46c6fc1d68e2R/-.jpg'
+    ],
     price: [
       { oldPrice: 6993, count: 100, price: 1958 },
       { oldPrice: 13986, count: 200, price: 3916 },
@@ -39,7 +47,11 @@ const productList = [
   }, {
     id: 3,
     title: 'ПАНТЕРНЫЙ МУХОМОР 3 СОРТ',
-    imgs: 'https://ae04.alicdn.com/kf/A732755432e8746de8f2852ae506f25d6I/-.jpg',
+    imgs: [
+      'https://ae04.alicdn.com/kf/A732755432e8746de8f2852ae506f25d6I/-.jpg',
+      'https://ae04.alicdn.com/kf/A732755432e8746de8f2852ae506f25d6I/-.jpg',
+      'https://ae04.alicdn.com/kf/A732755432e8746de8f2852ae506f25d6I/-.jpg'
+    ],
     price: [
       { oldPrice: 6513, count: 100, price: 1954 },
       { oldPrice: 13026, count: 200, price: 3908 },
@@ -57,7 +69,11 @@ const productList = [
   }, {
     id: 4,
     title: 'КРАСНЫЙ МУХОМОР 1 СОРТ',
-    imgs: 'https://ae04.alicdn.com/kf/Saab58b315e6f4abcbed0c23f497b6ef4G/-.jpg',
+    imgs: [
+      'https://ae04.alicdn.com/kf/Saab58b315e6f4abcbed0c23f497b6ef4G/-.jpg',
+      'https://ae04.alicdn.com/kf/Saab58b315e6f4abcbed0c23f497b6ef4G/-.jpg',
+      'https://ae04.alicdn.com/kf/Saab58b315e6f4abcbed0c23f497b6ef4G/-.jpg'
+    ],
     price: [
       { oldPrice: 5892, count: 100, price: 1414 },
       { oldPrice: 11784, count: 200, price: 2828 },

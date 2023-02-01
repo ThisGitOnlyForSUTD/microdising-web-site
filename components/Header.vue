@@ -4,15 +4,32 @@
       <div class="header-content">
         <h1 class="header-title">ГРИБЫ ПРЯМИКОМ ИЗ АЛТАЯ</h1>
         <h5 class="sub-title">свежего сбора</h5>
-        <a class="main-btn" href="#">Связяться с нами</a>
+        <a class="main-btn" @click="isPopupOpen = !isPopupOpen" href="#">Связяться с нами</a>
       </div>
       <div class="header-logo"></div>
   </div>
+  <popup-form v-if="isPopupOpen">
+    <i class="fa fa-times" @click="isPopupOpen = !isPopupOpen" aria-hidden="true"></i>
+  </popup-form>
  </div>
 </template>
 
 <script>
+import PopupForm from './PopupForm.vue'
 export default {
+  data () {
+    return {
+      isPopupOpen: false
+    }
+  },
+
+  methods: {
+    openPopup () {
+      this.isPopupOpen = true
+    }
+  },
+
+  components: { PopupForm }
 }
 </script>
 
