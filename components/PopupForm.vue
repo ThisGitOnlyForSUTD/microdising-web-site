@@ -10,9 +10,14 @@
         <p class="popup__subtitle">
           Отправьте нам свою заявку и мы с вами свяжемся!
         </p>
-        <input class="popup__input" type="text" placeholder="email">
-        <textarea name="" id="" cols="30" rows="10" class="popup__area"></textarea>
-        <a class="main-btn" href="#">Отправить</a>
+        <input class="popup__input" type="email" required placeholder="email">
+        <textarea
+         name=""
+         id="msg"
+         cols="30"
+         rows="10"
+         class="popup__area"></textarea>
+        <button type="" class="main-btn">Отправить</button>
       </form>
     </div>
   </div>
@@ -20,11 +25,11 @@
 
 <script>
 export default {
-  data () {
-    return {
-      close: false
-    }
-  },
+  data: () => ({
+    form: null,
+    inputFieldReset: null,
+    close: false
+  }),
   methods: {
   }
 }

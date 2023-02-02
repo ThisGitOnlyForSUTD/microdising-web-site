@@ -4,9 +4,7 @@
     <div class="product-img">
       <VueSlickCarousel class="carusel swiper" :dots="true">
         <div v-for="slider in product.imgs" :key="slider+1" alt="" :src="slider">
-          <div class="">
-            <img class="product-img" :src="slider" alt="">
-          </div>
+          <img class="product-img" :src="require(`~/assets/products/${slider}.png`)" alt="">
         </div>
       </VueSlickCarousel>
     </div>
@@ -29,9 +27,12 @@
               <strong class="price">{{ selectedProduct.price }} ₽</strong>
           </p>
           </div>
-          <button class="main-btn" @click="open = !open">Заказать</button>
+          <button class="main-btn" @click="isPopupOpen = !isPopupOpen">Заказать</button>
       </div>
     </div>
+    <popup-form v-if="isPopupOpen">
+      <i class="fa fa-times" @click="isPopupOpen = !isPopupOpen" aria-hidden="true"></i>
+    </popup-form>
 </div>
 </div>
 </template>
@@ -41,15 +42,23 @@ import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 import { mapGetters } from 'vuex'
+import PopupForm from '~/components/PopupForm.vue'
 export default {
   data () {
     return {
-      open: false,
+      isPopupOpen: false,
       product: {},
       selected: 100
     }
   },
-  components: { VueSlickCarousel },
+
+  methods: {
+    openPopup () {
+      this.isPopupOpen = true
+    }
+  },
+
+  components: { VueSlickCarousel, PopupForm },
 
   computed: {
     ...mapGetters(['SHOW_PRODUCTS']),
@@ -183,41 +192,7 @@ p {
   position: relative;
 }
 
-.popup {
-  display: flex;
-  background: rgb(255, 255, 255);
-  position: absolute;
-  z-index: 5000;
-  width: 100%;
-  max-width: 600px;
-  height: 400px;
-  margin: 0 auto;
-  top: 0;
-  left: 35%;
-  padding: 20px;
-  border: 5px solid rgb(5, 135, 7);
-  border-radius: 10px;
-  -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-  -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-}
-
-.popup__link {
-  background: rgb(5, 135, 7);;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  padding: 10px;
-}
-
-.popup__link-link {
-  color: #fff;
-}
-
 .fa {
   margin-left: 20px;
-}
-
-.popup-img {
-  width: 350px;
 }
 </style>

@@ -11,6 +11,9 @@
       <li class="nav-item"><a class="page-scroll" href="#contact">Контакты</a></li>
     </ul>
     <a class="nav-btn" href="https://aliexpress.ru/store/1102419501">Мы на Aliexpress</a>
+    <p class="opt"><a href="assets/docx/price.xlsx" class="">
+            <i class="fa fa-archive"></i>
+        Цены для оптовиков</a></p>
 </nav>
 </div>
 </template>

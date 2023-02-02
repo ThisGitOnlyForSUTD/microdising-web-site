@@ -6,7 +6,7 @@
         <div class="development" v-for="product in products" :key="product.id">
           <div class="">
             <div class="work-image">
-              <img :src="product.imgs" alt="Work">
+              <img class="work-image" :src="require(`~/assets/products/${product.imgs[0]}.png`)" alt="Work">
             </div>
             <div class="work-content">
               <h4 class="work-title">{{ product.title }}<a href="#"></a></h4>
@@ -63,7 +63,7 @@ export default {
 }
 .list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   @media only screen and (max-width: 1401px) {
     flex-wrap: wrap;
     justify-content: center;
@@ -83,6 +83,7 @@ export default {
   -moz-box-shadow: 0px -1px 12px -5px rgba(34, 60, 80, 0.6);
   box-shadow: 0px -1px 12px -5px rgba(34, 60, 80, 0.6);
   padding: 10px 10px 40px 10px;
+  margin: 10px;
   cursor: pointer;
   @media only screen and (max-width: 1401px) {
     margin: 0 10px;

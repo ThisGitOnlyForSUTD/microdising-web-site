@@ -15,6 +15,9 @@
             <li class="nav-item"><a class="nav__link" href="#work">Каталог</a></li>
             <li class="nav-item"><a class="nav__link" href="#testimonial">Отзывы</a></li>
             <li class="nav-item"><a class="nav__link" href="#contact">Контакты</a></li>
+            <p class="opt"><a href="assets/docx/price.xlsx" class="">
+              <i class="fa fa-archive"></i>
+              Цены для оптовиков</a></p>
             <ul class="social" style='border-color: #26b2f3'>
               <li><a class="social-item" href="#"><i class="fa fa-telegram" style='color:#26b2f3; font-size: 55px'></i></a></li>
               <li><a class="social-item" href="#"><i class="fa fa-whatsapp" style='color:#39f362; font-size: 55px;'></i></a></li>
