@@ -15,12 +15,15 @@
             <li class="nav-item"><a class="nav__link" href="#work">Каталог</a></li>
             <li class="nav-item"><a class="nav__link" href="#testimonial">Отзывы</a></li>
             <li class="nav-item"><a class="nav__link" href="#contact">Контакты</a></li>
-            <p class="opt"><a href="assets/docx/price.xlsx" class="">
+            <li class="nav__link_ali"><a href="#contact">Мы на Aliexpress</a></li>
+            <p class="opt"><a href="assets/docx/price.pdf" class="">
               <i class="fa fa-archive"></i>
               Цены для оптовиков</a></p>
             <ul class="social" style='border-color: #26b2f3'>
-              <li><a class="social-item" href="#"><i class="fa fa-telegram" style='color:#26b2f3; font-size: 55px'></i></a></li>
-              <li><a class="social-item" href="#"><i class="fa fa-whatsapp" style='color:#39f362; font-size: 55px;'></i></a></li>
+              <li class="social-item"><a class="social-item" href="https://t.me/+79132518135"><i class="fa fa-telegram" style='color:#26b2f3; font-size: 55px'></i></a></li>
+              <li class="social-item"><a class="social-item" href="https://wa.me/qr/EEL2EOKHJ62MJ1"><i class="fa fa-whatsapp" style='color:#39f362; font-size: 55px;'></i></a></li>
+              <li class="social-item"><i class="fa fa-phone" aria-hidden="true"></i> Телефон: <br>+7 (913)251-81-35</li>
+              <li class="social-item"><i class="fa fa-envelope" aria-hidden="true"></i> Почта: <br>amanita_muscaria_2020@mail.ru</li>
             </ul>
           </ul>
         </div>
@@ -52,14 +55,42 @@ export default {
 
 <style lang="scss" scoped>
 
+.opt {
+  margin-left: 20px;
+}
+
+.nav__link_ali {
+  text-align: center;
+  margin: 20px 5px;
+
+  border: 1px solid #ff3a46;
+  background: #ff3a46;
+  color: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 15px 40px;
+  font-weight: 700;
+  -webkit-box-shadow: 5px 5px 16px -5px rgba(34, 60, 80, 0.78);
+  -moz-box-shadow: 5px 5px 16px -5px rgba(34, 60, 80, 0.78);
+  box-shadow: 5px 5px 16px -5px rgba(34, 60, 80, 0.78);
+
+  a {
+    color: #fff;
+  }
+}
+
 .social {
-  margin-top: 200px;
+  margin-top: 50px;
   display: flex;
   justify-content: center;
+  text-align: center;
+  flex-direction: column;
 }
 
 .social-item {
-  margin-right: 30px;
+  margin-top: 30px;
+  text-align: center;
 }
 .nav {
   display: flex;
@@ -101,10 +132,10 @@ export default {
     z-index: 70;
     top: 2rem;
     left: 0;
-    height: 100vh;
+    height: 100%;
     background: rgb(255, 255, 255);
     width: 60%;
-    padding-top: 150px;
+    padding-top: 40px;
     -webkit-box-shadow: 12px -2px 5px -5px rgba(34, 60, 80, 0.6);
     -moz-box-shadow: 12px -2px 5px -5px rgba(34, 60, 80, 0.6);
     box-shadow: 12px -2px 5px -5px rgba(34, 60, 80, 0.6);

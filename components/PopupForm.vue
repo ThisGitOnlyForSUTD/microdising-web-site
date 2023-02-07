@@ -6,17 +6,25 @@
       </div>
       <img src="@/static/assets/images/popup.jpg" alt="" class="popup__img">
       <form class="popup__form">
-        <h4 class="popup__title">Свяжитесь с нами! {{ close }}</h4>
+        <h4 class="popup__title"> Для заказа свяжитесь с нами!</h4>
         <p class="popup__subtitle">
-          Отправьте нам свою заявку и мы с вами свяжемся!
+          Напишите нам в:
         </p>
-        <input class="popup__input" type="email" required placeholder="email">
+
+        <ul class="social" style='border-color: #26b2f3'>
+          <li class="social-item"><a class="social-item" href="https://t.me/+79132518135"><i class="fa fa-telegram" style='color:#26b2f3; font-size: 25px'></i> <span>telegram</span></a></li>
+          <li class="social-item"><a class="social-item" href="https://wa.me/qr/EEL2EOKHJ62MJ1"><i class="fa fa-whatsapp" style='color:#39f362; font-size: 25px;'></i> <span>whatsapp</span></a></li>
+          <li class="social-item"><i class="fa fa-phone" aria-hidden="true"></i> Телефон: <span>+7 (913)251-81-35</span></li>
+          <li class="social-item"><i class="fa fa-envelope" aria-hidden="true"></i> Почта: <span>amanita_muscaria_2020@mail.ru</span></li>
+        </ul>
+
+        <!-- <input class="popup__input" type="email" required placeholder="email">
         <textarea
          name=""
          id="msg"
          cols="30"
          rows="10"
-         class="popup__area"></textarea>
+         class="popup__area"></textarea> -->
         <button type="" class="main-btn">Отправить</button>
       </form>
     </div>
@@ -36,6 +44,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.social {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.social-item {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+
+  span {
+    padding-left: 15px;
+  }
+}
 
 .main-btn {
   border: 1px solid #ff3a46;

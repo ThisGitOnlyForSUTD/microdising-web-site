@@ -9,7 +9,7 @@
               <img class="work-image" :src="require(`~/assets/products/${product.imgs[0]}.png`)" alt="Work">
             </div>
             <div class="work-content">
-              <h4 class="work-title">{{ product.title }}<a href="#"></a></h4>
+              <h4 class="work-title">{{ product.title }} <br> 100 гр. <a href="#"></a></h4>
               <span class="old-price" style="text-decoration: line-through;">{{ product.price[0].oldPrice }}₽</span>
               <span class="price">{{ product.price[0].price}}₽</span>
             </div>
@@ -57,6 +57,8 @@ export default {
 .work-title {
   margin-bottom: 20px;
   text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
 }
 .work-area {
   padding: 120px 0;
@@ -143,6 +145,7 @@ export default {
 }
 
 .work-content {
+  height: 100px;
   border: none;
   margin-bottom: 30px;
 }

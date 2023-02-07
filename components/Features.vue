@@ -50,6 +50,6 @@ export default {
 .testimonial {
   margin-bottom: 250px;
   padding: 0 15px;
-  background: rgba(217, 221, 215, 0.834);
+  background-image: url('@/static/assets/images/Wave.svg');
 }
 </style>

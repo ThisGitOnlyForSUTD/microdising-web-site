@@ -1,6 +1,6 @@
 <template>
   <div>
-    <mobile-nab v-if="mobile == true"/>
+    <mobile-nab v-if="mobile === true"/>
     <Navbar v-else/>
     <nuxt />
     <Footer/>

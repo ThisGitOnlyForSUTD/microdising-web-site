@@ -9,6 +9,12 @@
       <img src="@/static/assets/images/comments/silder1.jpg" alt="">
       <img src="@/static/assets/images/comments/silder2.jpg" alt="">
       <img src="@/static/assets/images/comments/silder3.jpg" alt="">
+      <img src="@/static/assets/images/comments/slider4.jpg" alt="">
+      <img src="@/static/assets/images/comments/slider5.jpg" alt="">
+      <img src="@/static/assets/images/comments/slider6.jpg" alt="">
+      <img src="@/static/assets/images/comments/slider7.jpg" alt="">
+      <img src="@/static/assets/images/comments/slider8.jpg" alt="">
+      <img src="@/static/assets/images/comments/slider9.jpg" alt="">
     </VueSlickCarousel>
     </div>
   </section>

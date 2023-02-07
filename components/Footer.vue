@@ -5,14 +5,14 @@
       <div class="widget-contact pt-45">
         <h4 class="title">Свяжитесь с нами</h4>
         <div class="widget-info">
-          <p><span class="widget-title">Почта:</span>amanita_muscaria_2020@mail.ru</p>
-          <p><span class="widget-title">Телефон:</span>+7 (913)251-81-35</p>
-          <p class="opt"><a href="assets/docx/price.xlsx" class="">
+          <p><span class="widget-title"><i class="fa fa-envelope" aria-hidden="true"></i> Почта:</span>amanita_muscaria_2020@mail.ru</p>
+          <p><span class="widget-title"><i class="fa fa-phone" aria-hidden="true"></i> Телефон:</span>+7 (913)251-81-35</p>
+          <p class="opt"><a href="assets/docx/price.pdf" class="">
             <i class="fa fa-archive"></i>
             Цены для оптовиков</a></p>
           <ul class="social" style='border-color: #26b2f3'>
-            <li><a class="social-item" href="#"><i class="fa fa-telegram" style='color:#26b2f3; font-size: 55px'></i></a></li>
-            <li><a class="social-item" href="#"><i class="fa fa-whatsapp" style='color:#39f362; font-size: 55px;'></i></a></li>
+            <li><a class="social-item" href="https://t.me/+79132518135"><i class="fa fa-telegram" style='color:#26b2f3; font-size: 55px'></i></a></li>
+            <li><a class="social-item" href="https://wa.me/qr/EEL2EOKHJ62MJ1"><i class="fa fa-whatsapp" style='color:#39f362; font-size: 55px;'></i></a></li>
           </ul>
         </div>
       </div>
