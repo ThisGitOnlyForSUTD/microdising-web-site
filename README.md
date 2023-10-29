@@ -1,4 +1,6 @@
-# super-boost
+# Microdising
+
+**This is demo layout for web-site, u will not see anything interesting, but i think this is very funny project**
 
 ## Build Setup
 
