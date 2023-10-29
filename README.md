@@ -2,6 +2,8 @@
 
 **This is demo layout for web-site, u will not see anything interesting, but i think this is very funny project**
 
+### p.s sorry not sorry project hosting in firebase and it can load very loooong
+
 ## Build Setup
 
 ```bash
